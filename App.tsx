@@ -12,8 +12,6 @@ import type {PropsWithChildren} from 'react';
 import {
   Button,
   SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
   FlatList,
   Text,
@@ -24,13 +22,8 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
+import CustomButton from '~/src/Component/Button.tsx';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -55,11 +48,14 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaView>
       <View>
-        <Text>테스트</Text>
-        <Carousel></Carousel>
-        <Suspense fallback={<Text>로딩중</Text>}>
-          <Test></Test>
-        </Suspense>
+        <Text className="text-red-600">테스트</Text>
+        {/*<Carousel></Carousel>*/}
+        {/*<Suspense fallback={<Text>로딩중</Text>}>*/}
+        {/*  <Test></Test>*/}
+        {/*</Suspense>*/}
+
+        <CustomButton bg="primary" size="l" />
+        <CustomButton bg="secondary" size="m" />
       </View>
     </SafeAreaView>
   );
